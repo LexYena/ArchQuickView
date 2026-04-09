@@ -20,7 +20,7 @@ optdepends=(
     'python-mpv: video and audio playback'
 )
 source=("$pkgname-$pkgver.tar.gz::https://github.com/LexYena/ArchQuickView/archive/refs/tags/v$pkgver.tar.gz")
-sha256sums=('SKIP')
+sha256sums=('466293098f0e577894eb3139c4ad90d675b9f374cef08a19107922713282c3fa')
 
 package() {
     cd "ArchQuickView-$pkgver"
