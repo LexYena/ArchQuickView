@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=all/all;
+Actions=quickview_action
+X-KDE-Priority=TopLevel
+
+[Desktop Action quickview_action]
+Name=Quick View
+Name[ru]=Быстрый просмотр
+Icon=view-preview
+Exec=python3 /home/lex/.local/bin/quickview %F
