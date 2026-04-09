@@ -1,0 +1,12 @@
+/home/lex/Рабочий стол/quickview/dolphin-plugin/build/CMakeFiles/uninstall.dir
+/home/lex/Рабочий стол/quickview/dolphin-plugin/build/CMakeFiles/fetch-translations.dir
+/home/lex/Рабочий стол/quickview/dolphin-plugin/build/CMakeFiles/quickviewplugin.dir
+/home/lex/Рабочий стол/quickview/dolphin-plugin/build/CMakeFiles/test.dir
+/home/lex/Рабочий стол/quickview/dolphin-plugin/build/CMakeFiles/edit_cache.dir
+/home/lex/Рабочий стол/quickview/dolphin-plugin/build/CMakeFiles/rebuild_cache.dir
+/home/lex/Рабочий стол/quickview/dolphin-plugin/build/CMakeFiles/list_install_components.dir
+/home/lex/Рабочий стол/quickview/dolphin-plugin/build/CMakeFiles/install.dir
+/home/lex/Рабочий стол/quickview/dolphin-plugin/build/CMakeFiles/install/local.dir
+/home/lex/Рабочий стол/quickview/dolphin-plugin/build/CMakeFiles/install/strip.dir
+/home/lex/Рабочий стол/quickview/dolphin-plugin/build/CMakeFiles/quickviewplugin_autogen_timestamp_deps.dir
+/home/lex/Рабочий стол/quickview/dolphin-plugin/build/CMakeFiles/quickviewplugin_autogen.dir

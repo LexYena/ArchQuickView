@@ -1,0 +1,7 @@
+{
+    "KPlugin": {
+        "Name": "QuickView",
+        "Description": "Preview files with QuickView",
+        "MimeTypes": ["application/octet-stream", "inode/directory"]
+    }
+}
