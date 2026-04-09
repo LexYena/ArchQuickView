@@ -27,7 +27,7 @@ macOS Quick Look для KDE Plasma 6 / Dolphin.
 ### Быстро (Arch / CachyOS / Manjaro)
 
 ```bash
-git clone https://github.com/yourusername/quickview
+git clone https://github.com/LexYena/ArchQuickView
 cd quickview
 bash install.sh
 ```

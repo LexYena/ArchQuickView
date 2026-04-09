@@ -4,7 +4,7 @@ pkgver=1.0.0
 pkgrel=1
 pkgdesc="macOS Quick Look for KDE Plasma 6 / Dolphin"
 arch=('any')
-url="https://github.com/yourusername/quickview"
+url="https://github.com/LexYena/ArchQuickView"
 license=('MIT')
 depends=(
     'python'
