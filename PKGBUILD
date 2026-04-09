@@ -1,4 +1,4 @@
-# Maintainer: your name <your@email>
+# Maintainer: LexYena <https://github.com/LexYena>
 pkgname=quickview
 pkgver=1.0.0
 pkgrel=1

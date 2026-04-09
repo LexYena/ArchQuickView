@@ -4,7 +4,6 @@ macOS Quick Look для KDE Plasma 6 / Dolphin.
 
 Нажми пробел (или правый клик → Quick View) — мгновенный предпросмотр файла без его открытия.
 
-![QuickView preview](https://placeholder)
 
 ## Что умеет
 
@@ -78,7 +77,6 @@ cp quickview.desktop ~/.local/share/kio/servicemenus/
 
 **Из Dolphin:**
 - Правый клик на файле → **Quick View**
-- Или назначь клавишу: `Dolphin → Настройки → Комбинации клавиш → найди "Quick View"`
 
 **Из терминала:**
 ```bash
@@ -87,8 +85,7 @@ quickview /path/to/directory
 ```
 
 **Управление окном:**
-- `Esc` или `Space` — закрыть
-- `Space` (при открытом медиа) — пауза/воспроизведение
+- `Esc` — закрыть
 - Перетаскивание за заголовок — переместить окно
 
 ## Зависимости
