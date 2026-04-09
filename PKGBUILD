@@ -10,23 +10,33 @@ depends=(
     'python'
     'python-pyqt6'
     'python-pyqt6-webengine'
-    'poppler'            # pdftoppm — PDF preview
-    'ffmpegthumbnailer'  # video thumbnails
-    'ffmpeg'             # ffprobe for video dimensions + audio playback
-    'python-pillow'      # fast image header reading
-    'python-pygments'    # syntax highlighting for text/code
+    'poppler'
+    'ffmpegthumbnailer'
+    'ffmpeg'
+    'python-pillow'
+    'python-pygments'
 )
 optdepends=(
     'python-mpv: video and audio playback'
 )
-source=("quickview.py"
-        "quickview.desktop"
-        "quickview-app.desktop")
-sha256sums=('SKIP' 'SKIP' 'SKIP')
+source=("$pkgname-$pkgver.tar.gz::https://github.com/LexYena/ArchQuickView/archive/refs/tags/v$pkgver.tar.gz")
+sha256sums=('SKIP')
 
-prepare() {
-    # Write the app desktop file with correct install path
-    cat > "$srcdir/quickview-app.desktop" << EOF
+package() {
+    cd "ArchQuickView-$pkgver"
+
+    # Main script
+    install -Dm755 quickview.py "$pkgdir/usr/bin/quickview"
+
+    # Dolphin service menu
+    install -Dm644 quickview.desktop \
+        "$pkgdir/usr/share/kio/servicemenus/quickview.desktop"
+    sed -i "s|Exec=python3 [^ ]*quickview|Exec=python3 /usr/bin/quickview|g" \
+        "$pkgdir/usr/share/kio/servicemenus/quickview.desktop"
+
+    # Application entry
+    install -Dm644 /dev/stdin \
+        "$pkgdir/usr/share/applications/quickview.desktop" << EOF
 [Desktop Entry]
 Type=Application
 Name=QuickView
@@ -35,21 +45,7 @@ Exec=python3 /usr/bin/quickview %F
 StartupWMClass=quickview
 NoDisplay=true
 EOF
-}
 
-package() {
-    # Main script
-    install -Dm755 "$srcdir/quickview.py" "$pkgdir/usr/bin/quickview"
-
-    # Dolphin service menu (system-wide)
-    install -Dm644 "$srcdir/quickview.desktop" \
-        "$pkgdir/usr/share/kio/servicemenus/quickview.desktop"
-
-    # Fix Exec path in service menu
-    sed -i "s|Exec=python3 .*quickview|Exec=python3 /usr/bin/quickview|g" \
-        "$pkgdir/usr/share/kio/servicemenus/quickview.desktop"
-
-    # Application entry
-    install -Dm644 "$srcdir/quickview-app.desktop" \
-        "$pkgdir/usr/share/applications/quickview.desktop"
+    # License
+    install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
